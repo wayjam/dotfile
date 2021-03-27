@@ -11,7 +11,7 @@ env:
   # Note that some xterm terminfo databases don't declare support for italics.
   # You can verify this by checking for the presence of `smso` and `sitm` in
   # `infocmp xterm-256color`.
-  TERM: screen-256color
+  TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -67,27 +67,18 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    # family: "FiraCode Nerd Font"
     family: "JetBrainsMono Nerd Font Mono"
     style: "Regular"
-    # style: Retina
-    # family: "Fira Code"
-    # family: "Source Code Pro"
 
   # The bold font face
   bold:
     family: "JetBrainsMono Nerd Font Mono"
     style: Bold
-    # family: "Fira Code"
-    # family: "Source Code Pro"
 
   # The italic font face
   italics:
     family: "JetBrainsMono Nerd Font Mono"
     style: "Medium Italic"
-    # family: "Fira Code"
-    # family: "Source Code Pro"
-    # style: "Medium Italic"
 
   # Point size of the font
   size: 14.0
@@ -128,40 +119,32 @@ draw_bold_text_with_bright_colors: true
 # and cursor.background colors, otherwise invert the colors of the cursor.
 # custom_cursor_colors: false
 
-# Colors
+# Colors (One Half Dark)
+# https://github.com/sonph/onehalf/blob/master/alacritty/README.md
 colors:
-  # Default colours
   primary:
-    background: '0x2c2c2c'
-    foreground: '0xc9c6bc'
+    background: '0x282c34'
+    foreground: '0xdcdfe4'
 
-  # Colors that should be used to draw the terminal cursor. If these are unset,
-  # the cursor colour will be the inverse of the cell colour.
-  cursor:
-    text: '0xfeffff'
-    cursor: '0xc7c7c7'
-
-  # Normal colors
   normal:
-    black:   '0x1c1e25'
-    red:     '0xf27679'
-    green:   '0x92b476'
-    yellow:  '0xffcb65'
-    blue:    '0x6699cb'
-    magenta: '0xcc99cb'
-    cyan:    '0x66cccc'
-    white:   '0xf2f0eb'
+    black: '0x282c34'
+    red: '0xe06c75'
+    green: '0x98c379'
+    yellow: '0xe5c07b'
+    blue: '0x61afef'
+    magenta: '0xc678dd'
+    cyan: '0x56b6c2'
+    white: '0xdcdfe4'
 
-  # Bright colors
   bright:
-    black:   '0x676767'
-    red:     '0xff8185'
-    green:   '0xa2d9a4'
-    yellow:  '0xffd868'
-    blue:    '0x5e97d9'
-    magenta: '0xff76ff'
-    cyan:    '0x92ebe9'
-    white:   '0xfeffff'
+    black: '0x282c34'
+    red: '0xe06c75'
+    green: '0x98c379'
+    yellow: '0xe5c07b'
+    blue: '0x61afef'
+    magenta: '0xc678dd'
+    cyan: '0x56b6c2'
+    white: '0xdcdfe4'
 
   # Dim colors (Optional)
   # dim:
@@ -173,35 +156,6 @@ colors:
   #   magenta: '0xcc99cc'
   #   cyan:    '0x66cccc'
   #   white:   '0xdddddd'
-
-  # Tomorrow Night Bright
-  # primary:
-  #   background: '0x000000'
-  #   foreground: '0xeaeaea'
-  #
-  # cursor:
-  #   text: '0x000000'
-  #   cursor: '0xffffff'
-  #
-  # normal:
-  #   black:   '0x000000'
-  #   red:     '0xd54e53'
-  #   green:   '0xb9ca4a'
-  #   yellow:  '0xe6c547'
-  #   blue:    '0x7aa6da'
-  #   magenta: '0xc397d8'
-  #   cyan:    '0x70c0ba'
-  #   white:   '0xffffff'
-  #
-  # bright:
-  #   black:   '0x666666'
-  #   red:     '0xff3334'
-  #   green:   '0x9ec400'
-  #   yellow:  '0xe7c547'
-  #   blue:    '0x7aa6da'
-  #   magenta: '0xb77ee0'
-  #   cyan:    '0x54ced6'
-  #   white:   '0xffffff'
 
   # Indexed Colors
   #
