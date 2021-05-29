@@ -67,21 +67,22 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: "JetBrainsMono Nerd Font Mono"
-    style: "Regular"
+    family: "Hack Nerd Font"
+    # family: "DejaVuSansMono Nerd Font"
+    # family: "SauceCodePro Nerd Font"
 
   # The bold font face
-  bold:
-    family: "JetBrainsMono Nerd Font Mono"
-    style: Bold
+  # bold:
+  #   family: "SauceCodePro Nerd Font"
+  #   style: "Bold"
 
-  # The italic font face
-  italics:
-    family: "JetBrainsMono Nerd Font Mono"
-    style: "Medium Italic"
+  # # The italic font face
+  # italic:
+  #   family: "SauceCodePro Nerd Font Mono"
+  #   style: "Light Italic"
 
   # Point size of the font
-  size: 14.0
+  size: 15
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -117,7 +118,7 @@ draw_bold_text_with_bright_colors: true
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
-# custom_cursor_colors: false
+custom_cursor_colors: true
 
 # Colors (One Half Dark)
 # https://github.com/sonph/onehalf/blob/master/alacritty/README.md

@@ -4,9 +4,6 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
-set -g default-terminal "xterm-256color" # colors!
-# set -g default-terminal "xterm-256color-italic"
-
 # -- navigation ----------------------------------------------------------------
 
 # if you're running tmux within iTerm2
@@ -15,7 +12,8 @@ set -g default-terminal "xterm-256color" # colors!
 #   - and iTerm2 is configured to send [1;9A -> [1;9D for option + arrow keys
 # then uncomment the following line to make Meta + arrow keys mapping work
 #set -ga terminal-overrides "*:kUP3=\e[1;9A,*:kDN3=\e[1;9B,*:kRIT3=\e[1;9C,*:kLFT3=\e[1;9D"
-
+set -g default-terminal "xterm-256color" # colors!
+# set -g default-terminal "xterm-256color-italic"
 
 # -- windows & pane creation ---------------------------------------------------
 
