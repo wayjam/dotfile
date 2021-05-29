@@ -4,6 +4,8 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
+set -g default-terminal "xterm-256color" # colors!
+# set -g default-terminal "xterm-256color-italic"
 
 # -- navigation ----------------------------------------------------------------
 
@@ -341,6 +343,7 @@ tmux_conf_copy_to_os_clipboard=true
 
 # start with mouse mode enabled
 #set -g mouse on
+set -g mouse-resize-pane on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -414,7 +417,7 @@ tmux_conf_update_plugins_on_reload=false
 # }
 #
 # online() {
-#   ping -c 1 1.1.1.1 >/dev/null 2>&1 && printf '✔' || printf '✘'
+#   ping -q -c 1 -W 1 bing.com >/dev/null 2>&1 && printf '✔' || printf '✘'
 # }
 #
 # "$@"
