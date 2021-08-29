@@ -10,7 +10,7 @@ for _, v in pairs(hspoon_list) do
     hs.loadSpoon(v)
 end
 
-hswhints_keys = {"alt", "tab"}
+hswhints_keys = {hyperKey, "tab"}
 if string.len(hswhints_keys[2]) > 0 then
     spoon.ModalMgr.supervisor:bind(hswhints_keys[1], hswhints_keys[2], 'Show Window Hints', function()
         spoon.ModalMgr:deactivateAll()
@@ -26,7 +26,7 @@ cmodal:bind('', 'tab', 'Toggle Cheatsheet', function() spoon.ModalMgr:toggleChea
 if not hsapp_list then
     hsapp_list = {
         {key = 'f', name = 'Finder'},
-        {key = 's', name = 'Safari'},
+        {key = 'g', name = 'Google Chrome'},
         {key = 't', name = 'Terminal'},
         {key = 'v', id = 'com.apple.ActivityMonitor'},
         {key = 'y', id = 'com.apple.systempreferences'},
@@ -50,7 +50,7 @@ for _, v in ipairs(hsapp_list) do
 end
 
 -- Then we register some keybindings with modal supervisor
-hsappM_keys = hsappM_keys or {"alt", "A"}
+hsappM_keys = hsappM_keys or { hyperKey, "A" }
 if string.len(hsappM_keys[2]) > 0 then
     spoon.ModalMgr.supervisor:bind(hsappM_keys[1], hsappM_keys[2], "Enter AppM Environment", function()
         spoon.ModalMgr:deactivateAll()
@@ -86,7 +86,7 @@ if spoon.VimMode then
   vim:setAlertFont("Courier New")
 
   -- Enter normal mode by typing a key sequence
-  vim:enterWithSequence('jk')
+  -- vim:enterWithSequence('jk')
 
   -- if you want to bind a single key to entering vim, remove the
   -- :enterWithSequence('jk') line above and uncomment the bindHotKeys line
@@ -95,12 +95,12 @@ if spoon.VimMode then
   -- To customize the hot key you want, see the mods and key parameters at:
   --   https://www.hammerspoon.org/docs/hs.hotkey.html#bind
   --
-  vim:bindHotKeys({ enter = { {'alt'}, ';' } })
+  vim:bindHotKeys({ enter = { {'ctrl', 'alt'}, ';' } })
 end
 
 --- Register AClock
 if spoon.AClock then
-    hsaclock_keys = {"alt", "T"}
+    hsaclock_keys = { hyperKey, "t" }
     if string.len(hsaclock_keys[2]) > 0 then
         spoon.ModalMgr.supervisor:bind(hsaclock_keys[1], hsaclock_keys[2], "Toggle Floating Clock", function() spoon.AClock:toggleShow() end)
     end
@@ -143,7 +143,7 @@ if spoon.WinWin then
     cmodal:bind('', '`', 'Center Cursor', function() spoon.WinWin:centerCursor() end)
 
     -- Register resizeM with modal supervisor
-    hsresizeM_keys = {"alt", "R"}
+    hsresizeM_keys = { hyperKey, "r" }
     if string.len(hsresizeM_keys[2]) > 0 then
         spoon.ModalMgr.supervisor:bind(hsresizeM_keys[1], hsresizeM_keys[2], "Enter resizeM Environment", function()
             -- Deactivate some modal environments or not before activating a new one
@@ -155,7 +155,7 @@ if spoon.WinWin then
 end
 
 -- Register lock screen
-hslock_keys = {"alt", "l"}
+hslock_keys = { hyperKey, "l" }
 if string.len(hslock_keys[2]) > 0 then
     spoon.ModalMgr.supervisor:bind(hslock_keys[1], hslock_keys[2], "Lock Screen", function()
         hs.caffeinate.lockScreen()

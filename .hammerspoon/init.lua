@@ -2,6 +2,15 @@ hs.hotkey.alertDuration = 0
 hs.hints.showTitleThresh = 0
 hs.window.animationDuration = 0
 
+hyperKey = {"ctrl", "alt"}
+-- -----------------------------------------------------------------------
+--                            ** Requires **                            --
+-- -----------------------------------------------------------------------
+hs.loadSpoon("ModalMgr")
+
+require "spoons"
+
+spoon.ModalMgr.supervisor:enter()
 -- -----------------------------------------------------------------------
 --                            ** For Debug **                           --
 -- -----------------------------------------------------------------------
@@ -20,15 +29,7 @@ end
 hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
 
 -- Well, sometimes auto-reload is not working, you know u.u
-hs.hotkey.bind({"cmd", "shift", "ctrl"}, "r", function()
+hs.hotkey.bind({"cmd", "shift", "alt"}, "r", function()
   hs.reload()
 end)
-hs.alert.show("Config loaded")
--- -----------------------------------------------------------------------
---                            ** Requires **                            --
--- -----------------------------------------------------------------------
-hs.loadSpoon("ModalMgr")
-
-require "spoons"
-
-spoon.ModalMgr.supervisor:enter()
+hs.alert.show("Config Loaded")
