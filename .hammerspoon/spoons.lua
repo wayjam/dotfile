@@ -10,7 +10,7 @@ for _, v in pairs(hspoon_list) do
     hs.loadSpoon(v)
 end
 
-hswhints_keys = {hyperKey, "tab"}
+hswhints_keys = {localHyperKey, "tab"}
 if string.len(hswhints_keys[2]) > 0 then
     spoon.ModalMgr.supervisor:bind(hswhints_keys[1], hswhints_keys[2], 'Show Window Hints', function()
         spoon.ModalMgr:deactivateAll()
@@ -95,7 +95,7 @@ if spoon.VimMode then
   -- To customize the hot key you want, see the mods and key parameters at:
   --   https://www.hammerspoon.org/docs/hs.hotkey.html#bind
   --
-  vim:bindHotKeys({ enter = { {'ctrl', 'alt'}, ';' } })
+  vim:bindHotKeys({ enter = { hyperKey, ';' } })
 end
 
 --- Register AClock
@@ -143,7 +143,7 @@ if spoon.WinWin then
     cmodal:bind('', '`', 'Center Cursor', function() spoon.WinWin:centerCursor() end)
 
     -- Register resizeM with modal supervisor
-    hsresizeM_keys = { hyperKey, "r" }
+    hsresizeM_keys = { hyperKey, "w" }
     if string.len(hsresizeM_keys[2]) > 0 then
         spoon.ModalMgr.supervisor:bind(hsresizeM_keys[1], hsresizeM_keys[2], "Enter resizeM Environment", function()
             -- Deactivate some modal environments or not before activating a new one

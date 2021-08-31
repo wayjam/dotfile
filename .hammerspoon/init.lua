@@ -1,8 +1,12 @@
+-- -----------------------------------------------------------------------
+--                            ** Variables **                            --
+-- -----------------------------------------------------------------------
 hs.hotkey.alertDuration = 0
 hs.hints.showTitleThresh = 0
 hs.window.animationDuration = 0
 
 hyperKey = {"ctrl", "alt"}
+localHyperKey = "alt"
 -- -----------------------------------------------------------------------
 --                            ** Requires **                            --
 -- -----------------------------------------------------------------------
@@ -28,7 +32,6 @@ function reloadConfig(files)
 end
 hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
 
--- Well, sometimes auto-reload is not working, you know u.u
 hs.hotkey.bind({"cmd", "shift", "alt"}, "r", function()
   hs.reload()
 end)
