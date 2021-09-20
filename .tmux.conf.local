@@ -206,7 +206,7 @@ tmux_conf_theme_right_separator_sub="\uE0B3"  #   PowerlineSymbols.otf font, see
 # tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
 tmux_conf_theme_status_left=" ❐ #S "
 # tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized} | ↑ #{?uptime_y,#{uptime_y}y,}#{?uptime_d,#{uptime_d}d,}#{?uptime_h,#{uptime_h}h,}#{?uptime_m,#{uptime_m}m,}#{?battery_status, #{battery_status},}#{?battery_percentage, #{battery_percentage},} | %a %m/%d %R #(date +%Z) | #{hostname} "
+tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized} | ↑ #{?uptime_y,#{uptime_y}y,}#{?uptime_d,#{uptime_d}d,}#{?uptime_h,#{uptime_h}h,}#{?uptime_h,#{uptime_m}m,}#{?battery_status, #{battery_status},}#{?battery_percentage, #{battery_percentage},} | %a %m/%d %R #(date +%Z) | #{hostname} "
 
 
 # status left style
@@ -220,7 +220,7 @@ tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_1,$tmux_conf_theme_colo
 tmux_conf_theme_status_right_attr="none,none,none,bold"
 
 # pairing indicator
-tmux_conf_theme_pairing="⚇"                 # U+2687
+tmux_conf_theme_pairing="◎"                 # U+2687
 tmux_conf_theme_pairing_fg="none"
 tmux_conf_theme_pairing_bg="none"
 tmux_conf_theme_pairing_attr="none"
@@ -232,7 +232,7 @@ tmux_conf_theme_prefix_bg="none"
 tmux_conf_theme_prefix_attr="none"
 
 # mouse indicator
-tmux_conf_theme_mouse="↗"                   # U+2197
+tmux_conf_theme_mouse="⌘"
 tmux_conf_theme_mouse_fg="none"
 tmux_conf_theme_mouse_bg="none"
 tmux_conf_theme_mouse_attr="none"
@@ -284,10 +284,8 @@ tmux_conf_battery_vbar_palette="gradient"
 # symbols used to indicate whether battery is charging or discharging
 # tmux_conf_battery_status_charging="↑"       # U+2191
 # tmux_conf_battery_status_discharging="↓"    # U+2193
-# tmux_conf_battery_status_charging="🔌"     # U+1F50C
-# tmux_conf_battery_status_discharging="🔋"  # U+1F50B
-tmux_conf_battery_status_charging="AC ♥"
-tmux_conf_battery_status_discharging="♥"
+tmux_conf_battery_status_charging="🔌"     # U+1F50C
+tmux_conf_battery_status_discharging="🔋"  # U+1F50B
 
 # clock style (when you hit <prefix> + t)
 # you may want to use %I:%M %p in place of %R in tmux_conf_theme_status_right
