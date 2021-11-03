@@ -67,7 +67,8 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: "Hack Nerd Font"
+    family: "BlexMono Nerd Font Mono"
+    style: Book
     # family: "DejaVuSansMono Nerd Font"
     # family: "SauceCodePro Nerd Font"
 
@@ -82,7 +83,7 @@ font:
   #   style: "Light Italic"
 
   # Point size of the font
-  size: 15
+  size: 16
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
