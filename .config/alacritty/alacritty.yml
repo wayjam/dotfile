@@ -68,6 +68,7 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
+    # family: "MesloLGM Nerd Font"
     family: "JetBrainsMono Nerd Font"
     style: "Regular"
     # family: "DejaVuSansMono Nerd Font"
@@ -110,10 +111,6 @@ font:
   # `use_thin_strokes` to `true` and enable font smoothing by running the
   # following command:
   #   `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
-  #
-  # This is a global setting and will require a log out or restart to take
-  # effect.
-  use_thin_strokes: true
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -472,5 +469,11 @@ debug:
 
   # Record all characters and escape sequences as test data.
   ref_test: false
+
+patch:
+  app_options:
+    org.alacritty:
+      ascii_mode: true
+      no_inline: true
 
 # vim: nospell
