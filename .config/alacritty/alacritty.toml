@@ -53,7 +53,11 @@ x = 0
 y = 0
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+#family = "DejaVuSansMono Nerd Font"
+#family = "SauceCodePro Nerd Font"
+#family = "JetBrainsMono Nerd Font"
+#family = "Hack Nerd Font Mono"
+family = "CaskaydiaCove Nerd Font Mono"
 style = "Regular"
 
 [font.offset]
