@@ -353,6 +353,12 @@ key_bindings:
   - { key: K,        mods: Alt,     chars: "\x1bk"                       }
   - { key: H,        mods: Alt,     chars: "\x1bh"                       }
   - { key: L,        mods: Alt,     chars: "\x1bl"                       }
+  - { key: B,        mods: Alt,     chars: "\x1bb"                       }
+  - { key: F,        mods: Alt,     chars: "\x1bf"                       }
+  - { key: D,        mods: Alt,     chars: "\x1bd"                       }
+  - { key: T,        mods: Alt,     chars: "\x1bt"                       }
+  - { key: W,        mods: Alt,     chars: "\x1bw"                       }
+  - { key: X,        mods: Alt,     chars: "\x1bx"                       }
 
     # shortcuts for tmux. the leader key is control-a (0x01)
   - { key: W,        mods: Command,       chars: "\x01&"                       }  # close tab (kill)
@@ -431,7 +437,7 @@ cursor:
   # window is not focused.
   unfocused_hollow: true
 
-# dynamic_title: false
+dynamic_title: true
 
 # Live config reload (changes require restart)
 live_config_reload: true
