@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home.sessionVariables = {
     # for go
     # GOPROXY = "https://goproxy.io";

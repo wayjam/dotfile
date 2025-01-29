@@ -6,7 +6,6 @@
   ...
 }: {
   imports = [
-    ../modules/font
     ./core.nix
     ./shell
     ./git.nix

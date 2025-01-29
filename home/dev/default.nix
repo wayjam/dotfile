@@ -11,7 +11,9 @@ in {
     enable = mkEnableOption "Development";
   };
 
-  config = mkIf cfg.enable ({
-  } // import (./core.nix) {inherit config lib pkgs;} 
-  // import (./langs.nix) {inherit config lib pkgs;} );
+  config = mkIf cfg.enable (
+    {}
+    // import ./core.nix {inherit config lib pkgs;}
+    // import ./langs.nix {inherit config lib pkgs;}
+  );
 }

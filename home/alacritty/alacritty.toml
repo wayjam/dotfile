@@ -57,8 +57,7 @@ y = 0
 #family = "DejaVuSansMono Nerd Font"
 #family = "SauceCodePro Nerd Font"
 #family = "JetBrainsMono Nerd Font"
-#family = "Hack Nerd Font Mono"
-family = "CaskaydiaCove Nerd Font Mono"
+family = "Cascadia Mono"
 style = "Regular"
 
 [font.offset]

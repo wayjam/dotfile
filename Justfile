@@ -35,13 +35,13 @@ prefetch-gh owner repo rev="HEAD":
 darwin-build host=profile:
   nix build .#darwinConfigurations.{{host}}.system
 
-  # ./result/sw/bin/darwin-rebuild switch --flake .#{{host}}
+  ./result/sw/bin/darwin-rebuild switch --flake .#{{host}}
 
 [group('darwin')]
 darwin-debug host=profile:
-  nix build .#darwinConfigurations.{{host}}.system --show-trace --verbose
+  nix build .#darwinConfigurations.{{host}}.system --show-trace --print-build-logs --verbose
 
-  ./result/sw/bin/darwin-rebuild switch --flake .#{{host}} --show-trace --verbose
+  ./result/sw/bin/darwin-rebuild switch --flake .#{{host}} --show-trace --print-build-logs --verbose --dry-run
 
 ############################################################################
 #

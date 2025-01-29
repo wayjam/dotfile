@@ -136,11 +136,11 @@
             freezeRegistry
           ]
           ++ specifics.modules
-          ++ homeManagerModules
           ++ [
             hostRootModule
             hostConfig.module
-          ];
+          ]
+          ++ homeManagerModules;
       };
   in
     flake-utils.lib.eachDefaultSystem (system: {
